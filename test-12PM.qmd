@@ -10,6 +10,7 @@ editor: visual
 #| message: false 
 library(tidyverse) # general uze package
 library(lterdatasampler) # package of data frames
+library(viridis)
 data(pie_crab) # import pie_crab data
 ```
 
@@ -20,6 +21,11 @@ data(pie_crab) # import pie_crab data
 #| label: latitude size plot
 ggplot(data = pie_crab, # data is pie_crab
        aes(x = latitude, # x is latitude
-           y = size)) # y is size
+           y = size,  # y is size
+           color = site)) +
+  geom_point() + # create scatter plot
+  theme_minimal() + # change theme
+  scale_color_viridis(discrete = T, # select specific color palette for viridis package
+                      option = "plasma")
 ```
 
