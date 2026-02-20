@@ -7,9 +7,10 @@ editor: visual
 ---
 
 ```{r}
-library(tidyverse)
-library(lterdatasampler)
-data(pie_crab)
+#| message: false 
+library(tidyverse) # general uze package
+library(lterdatasampler) # package of data frames
+data(pie_crab) # import pie_crab data
 ```
 
 
@@ -17,8 +18,8 @@ data(pie_crab)
 
 ```{r}
 #| label: latitude size plot
-ggplot(data = pie_crab,
-       aes(x = latitude,
-           y = size))
+ggplot(data = pie_crab, # data is pie_crab
+       aes(x = latitude, # x is latitude
+           y = size)) # y is size
 ```
 
